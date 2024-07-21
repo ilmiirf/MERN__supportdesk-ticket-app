@@ -81,7 +81,7 @@ export const loginUser = asyncHandler(async (req: Request, res: Response) => {
 export const getMe = asyncHandler(
   async (req: RequestWithUser, res: Response) => {
     const user = {
-      id: req.user?._id,
+      id: req.user?.id,
       email: req.user?.email,
       name: req.user?.name,
     };
